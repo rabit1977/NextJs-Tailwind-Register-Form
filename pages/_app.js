@@ -1,3 +1,4 @@
+import App from '.'
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
