@@ -107,9 +107,9 @@ const Register = () => {
           <h1>Register</h1>
           <form
             onSubmit={handleSubmit}
-            className='flex justify-evenly flex-col flex-1 pb-2'
+            className='flex justify-evenly flex-col flex-1 pb-2 space-y-2'
           >
-            <label htmlFor='username'>
+            <label htmlFor='username' className='mt-1'>
               Username:
               <FontAwesomeIcon
                 icon={faCheck}
@@ -148,7 +148,7 @@ const Register = () => {
               Letters, numbers, underscores, hyphens allowed.
             </p>
 
-            <label htmlFor='password'>
+            <label htmlFor='password' className='mt-1'>
               Password:
               <FontAwesomeIcon
                 icon={faCheck}
@@ -189,7 +189,7 @@ const Register = () => {
               <span aria-label='percent'>%</span>
             </p>
 
-            <label htmlFor='confirm_pwd'>
+            <label htmlFor='confirm_pwd' className='mt-1'>
               Confirm Password:
               <FontAwesomeIcon
                 icon={faCheck}
@@ -223,6 +223,7 @@ const Register = () => {
             </p>
 
             <button
+              className='mt-2 p-1 border rounded-md'
               disabled={!validName || !validPwd || !validMatch ? true : false}
             >
               Sign Up
