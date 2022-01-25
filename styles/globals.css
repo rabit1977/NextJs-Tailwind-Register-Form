@@ -17,16 +17,23 @@
     min-height: 100vh;
     background-color: #18f;
   }
+  a, a:visited {
+    color: #fff;
+}
 }
 @tailwind components;
 
-@layer components {
+@layer utilities {
   .errmsg {
     background-color: lightpink;
     color: firebrick;
     font-weight: bold;
     padding: 0.5rem;
     margin-bottom: 0.5rem;
+  }
+  .valid {
+    color: limegreen;
+    margin-left: 0.25rem;
   }
 }
 
