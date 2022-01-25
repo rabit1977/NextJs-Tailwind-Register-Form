@@ -89,7 +89,7 @@ const Register = () => {
   return (
     <>
       {success ? (
-        <section className='flex flex-col p-2 bg-black/80 w-full max-w-1/4 min-h-[400px]'>
+        <section className='flex flex-col justify-start; p-2 bg-black/80 w-full max-w-1/4 min-h-[400px]'>
           <h1>Success!</h1>
           <p>
             <a href='#'>Sign In</a>
@@ -120,7 +120,8 @@ const Register = () => {
                 className={validName || !user ? 'hide' : 'invalid'}
               />
             </label>
-            <input className='text-sm p-1 rounded-md'
+            <input
+              className='text-sm p-1 text-black/80 rounded-md'
               type='text'
               id='username'
               ref={userRef}
@@ -158,7 +159,8 @@ const Register = () => {
                 className={validPwd || !pwd ? 'hide' : 'invalid'}
               />
             </label>
-            <input className='text-sm p-1 rounded-md'
+            <input
+              className='text-sm text-black/80 p-1 text-black/80 rounded-md'
               type='password'
               id='password'
               onChange={(e) => setPwd(e.target.value)}
@@ -198,7 +200,8 @@ const Register = () => {
                 className={validMatch || !matchPwd ? 'hide' : 'invalid'}
               />
             </label>
-            <input className='text-sm p-1 rounded-md'
+            <input
+              className='text-sm p-1 text-black/80 rounded-md'
               type='password'
               id='confirm_pwd'
               onChange={(e) => setMatchPwd(e.target.value)}
