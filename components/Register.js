@@ -105,10 +105,7 @@ const Register = () => {
             {errMsg}
           </p>
           <h1>Register</h1>
-          <form
-            onSubmit={handleSubmit}
-            className='flex justify-evenly flex-col flex-1 pb-2 space-y-2'
-          >
+          <form onSubmit={handleSubmit} className='flex flex-col  pb-2'>
             <label htmlFor='username' className='mt-1'>
               Username:
               <FontAwesomeIcon
@@ -121,7 +118,7 @@ const Register = () => {
               />
             </label>
             <input
-              className='text-sm p-1 text-black/80 rounded-md'
+              className='text-sm p-1 text-black/80 mb-3 rounded-md'
               type='text'
               id='username'
               ref={userRef}
@@ -160,7 +157,7 @@ const Register = () => {
               />
             </label>
             <input
-              className='text-sm text-black/80 p-1 text-black/80 rounded-md'
+              className='text-sm text-black/80 p-1 mb-3 rounded-md'
               type='password'
               id='password'
               onChange={(e) => setPwd(e.target.value)}
@@ -201,7 +198,7 @@ const Register = () => {
               />
             </label>
             <input
-              className='text-sm p-1 text-black/80 rounded-md'
+              className='text-sm p-1 text-black/80 mb-3 rounded-md'
               type='password'
               id='confirm_pwd'
               onChange={(e) => setMatchPwd(e.target.value)}
@@ -223,7 +220,7 @@ const Register = () => {
             </p>
 
             <button
-              className='mt-2 p-1 border rounded-md'
+              className='mt-2 p-1 border rounded-md hover:bg-blue-600/80'
               disabled={!validName || !validPwd || !validMatch ? true : false}
             >
               Sign Up
