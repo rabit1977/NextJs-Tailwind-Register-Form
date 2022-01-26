@@ -14,7 +14,8 @@
   }
 
   body {
-    min-height: 100vh;
+    min-height: 100%;
+    width: 100%;
     background-color: #18f;
   }
   a,
@@ -23,6 +24,8 @@
   }
 }
 @tailwind components;
+
+@tailwind utilities;
 
 @layer utilities {
   .errmsg {
@@ -64,5 +67,3 @@
     display: none;
   }
 }
-
-@tailwind utilities;
