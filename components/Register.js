@@ -5,7 +5,7 @@ import {
   faInfoCircle,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import axios from 'axios';
+import axios from '../pages/api/axios';
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
@@ -65,9 +65,9 @@ const Register = () => {
           withCredentials: true,
         }
       );
-      console.log(response?.data);
-      console.log(response?.accessToken);
-      console.log(JSON.stringify(response));
+      // console.log(response?.data);
+      // console.log(response?.accessToken);
+      // console.log(JSON.stringify(response));
       setSuccess(true);
       //clear state and controlled inputs
       //need value attrib on inputs for this
@@ -118,7 +118,7 @@ const Register = () => {
               />
             </label>
             <input
-              className='text-sm p-1 text-black/80 mb-3 rounded-md'
+              className='text-sm outline-none p-1 text-black/80 mb-3 rounded-md'
               type='text'
               id='username'
               ref={userRef}
@@ -157,7 +157,7 @@ const Register = () => {
               />
             </label>
             <input
-              className='text-sm text-black/80 p-1 mb-3 rounded-md'
+              className='text-sm outline-none text-black/80 p-1 mb-3 rounded-md'
               type='password'
               id='password'
               onChange={(e) => setPwd(e.target.value)}
@@ -198,7 +198,7 @@ const Register = () => {
               />
             </label>
             <input
-              className='text-sm p-1 text-black/80 mb-3 rounded-md'
+              className='text-sm p-1 outline-none text-black/80 mb-3 rounded-md'
               type='password'
               id='confirm_pwd'
               onChange={(e) => setMatchPwd(e.target.value)}
@@ -220,7 +220,7 @@ const Register = () => {
             </p>
 
             <button
-              className='mt-2 p-1 border rounded-md hover:bg-blue-600/80'
+              className='mt-2 outline-none p-1 border rounded-md hover:bg-blue-600/80'
               disabled={!validName || !validPwd || !validMatch ? true : false}
             >
               Sign Up
